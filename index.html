@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Schedule</title>
+
+    <link rel="stylesheet" href="css/styles.css">
     <!-- 
 
 Highway Template
@@ -46,42 +48,94 @@ https://templatemo.com/tm-520-highway
         </div>
     </div>
 
+    <!-- <button id="">Monday</button>
+    <button id="">Tuesday</button>
+    <button id="">Wednesday</button>
+    <button id="">Thursday</button>
+    <button id="">Friday</button>
+    <p id="schedule"></p> -->
+<!-- 
+    <div id="myDIV">
+        This is my DIV element.
+    </div> -->
+
+
 
     <div class="blog-entries">
         <div class="container">
-            <div class="col-md-9">
-                <div class="blog-posts">
+            <button class="button button1" onclick="showSubject('sunday')">Sunday</button>
+            <button class="button button2" onclick="showSubject('monday')">Monday</button>
+            <button class="button button3" onclick="showSubject('tuesday')">Tuesday</button>
+            <button class="button button4" onclick="showSubject('wednesday')">Wednesday</button>
+            <button class="button button5" onclick="showSubject('thursday')">Thursday</button>
+            <button class="button button6" onclick="showSubject('friday')">Friday</button>
+            <button class="button button7" onclick="showSubject('saturday')">Saturday</button>
 
-                    <h1 style="color:rgb(255, 217, 0);">Monday:</h1><br>
-                    <p style="color: bisque;">01418497 SEMINAR - (8.00-11.00)</p>
-                    <hr>
-
-                    <h1 style="color:rgb(247, 151, 226);">Tuesday:</h1><br>
-                    <p style="color: bisque;">01418442 WEB TECH - (8.00-10.00) <br>
-                        01418442 WEB TECH - (12.30-14.30) <br>
-                        01418311 CHA.PROG - (17.00-19.00) <br>
-                    </p>
-                    <hr>
-
-                    <h1 style="color:rgb(71, 255, 126);">Wednesday:</h1><br>
-                    <p style="color: bisque;">01418341 IP - (9.30-11.00) <br>
-                        01418331 OS - (12.00-14.00) <br>
-                        01418321 SA - (14.00-18.00) <br>
-                    </p>
-                    <hr>
-
-                    <h1 style="color:rgb(255, 155, 73);">Thursday:</h1><br>
-                    <p style="color: bisque;">01418471 SE - (8.00-10.00) <br>
-                        01418471 SE - (11.00-13.00) <br>
-                        01418311 CHA.PROG - (17.00-19.00) <br>
-                    </p>
-                    <hr>
-
-                    <h1 style="color:rgb(76, 250, 227);">Friday:</h1><br>
-                    <p style="color: bisque;">01418341 IP - (9.30-11.00) <br>
-                        01418331 OS - (12.00-14.00) <br>
-                    </p>
+            <div id="sunday" style="visibility: hidden;">
+                <p style="color: bisque;">No study in Sunday.</p>
+                <hr>
+            </div>
+            <div id="monday" style="visibility: hidden;">
+                <a href="#" onclick="showTime('seminar')">01418497 SEMINAR</a>
+                <div id="seminar" style="visibility: hidden;">
+                    <p style="color: bisque;">8.00-11.00</p>
                 </div>
+                <hr>
+            </div>
+            <div id="tuesday" style="visibility: hidden;">
+                <a href="#" onclick="showTime('web')">01418442 WEB TECH</a>
+                <div id="web" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 8.00-10.00</p>
+                    <p style="color: bisque;">LAB: 12.30-14.30</p>
+                </div>
+                <a href="#" onclick="showTime('cha_tue')">01418311 CHA.PROG</a>
+                <div id="cha_tue" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 17.00-19.00</p>
+                </div>
+                <hr>
+            </div>
+            <div id="wednesday" style="visibility: hidden;">
+                <a href="#" onclick="showTime('ip_wed')">01418341 IP</a>
+                <div id="ip_wed" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 9.30-11.00</p>
+                </div>
+                <a href="#" onclick="showTime('os_wed')">01418331 OS</a>
+                <div id="os_wed" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 12.00-14.00</p>
+                </div>
+                <a href="#" onclick="showTime('sa')">01418321 SA</a>
+                <div id="sa" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 14.00-16.00</p>
+                    <p style="color: bisque;">LAB: 16.00-18.00</p>
+                </div>
+                <hr>
+            </div>
+            <div id="thursday" style="visibility: hidden;">
+                <a href="#" onclick="showTime('se')">01418471 SE</a>
+                <div id="se" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 8.00-10.00</p>
+                    <p style="color: bisque;">LAB: 11.00-13.00</p>
+                </div>
+                <a href="#" onclick="showTime('cha')">01418311 CHA.PROG</a>
+                <div id="cha" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 17.00-19.00</p>
+                </div>
+                <hr>
+            </div>
+            <div id="friday" style="visibility: hidden;">
+                <a href="#" onclick="showTime('ip_thur')">01418341 IP</a>
+                <div id="ip_thur" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 9.30-11.00</p>
+                </div>
+                <a href="#" onclick="showTime('os_thur')">01418331 OS</a>
+                <div id="os_thur" style="visibility: hidden;">
+                    <p style="color: bisque;">LECTURE: 12.00-14.00</p>
+                </div>
+                <hr>
+            </div>
+            <div id="saturday" style="visibility: hidden;">
+                <p style="color: bisque;">No study in Saturday.</p>
+                <hr>
             </div>
         </div>
     </div>
@@ -111,6 +165,7 @@ https://templatemo.com/tm-520-highway
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
+    <script src="js/index.js"></script>
 </body>
 
 </html>
